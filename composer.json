@@ -16,6 +16,11 @@
             "Notadd\\Workerman\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Notadd\\Workerman\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": ">=7.0"
     },
