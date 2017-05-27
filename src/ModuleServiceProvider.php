@@ -12,6 +12,7 @@ use Illuminate\Events\Dispatcher;
 use Notadd\Foundation\Module\Abstracts\Module;
 use Notadd\Workerman\Injections\Installer;
 use Notadd\Workerman\Injections\Uninstaller;
+use Notadd\Workerman\Listeners\PermissionGroupRegister;
 use Notadd\Workerman\Listeners\PermissionTypeRegister;
 
 /**
@@ -24,6 +25,7 @@ class ModuleServiceProvider extends Module
      */
     public function boot()
     {
+        $this->app->make(Dispatcher::class)->subscribe(PermissionGroupRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionTypeRegister::class);
     }
 
