@@ -17,6 +17,7 @@ use Notadd\Workerman\Listeners\PermissionGroupRegister;
 use Notadd\Workerman\Listeners\PermissionModuleRegister;
 use Notadd\Workerman\Listeners\PermissionRegister;
 use Notadd\Workerman\Listeners\PermissionTypeRegister;
+use Notadd\Workerman\Listeners\RouteRegister;
 
 /**
  * Class ModuleServiceProvider.
@@ -33,6 +34,7 @@ class ModuleServiceProvider extends Module
         $this->app->make(Dispatcher::class)->subscribe(PermissionModuleRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionTypeRegister::class);
+        $this->app->make(Dispatcher::class)->subscribe(RouteRegister::class);
     }
 
     /**
