@@ -14,6 +14,7 @@ use Notadd\Workerman\Injections\Installer;
 use Notadd\Workerman\Injections\Uninstaller;
 use Notadd\Workerman\Listeners\PermissionGroupRegister;
 use Notadd\Workerman\Listeners\PermissionModuleRegister;
+use Notadd\Workerman\Listeners\PermissionRegister;
 use Notadd\Workerman\Listeners\PermissionTypeRegister;
 
 /**
@@ -28,6 +29,7 @@ class ModuleServiceProvider extends Module
     {
         $this->app->make(Dispatcher::class)->subscribe(PermissionGroupRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionModuleRegister::class);
+        $this->app->make(Dispatcher::class)->subscribe(PermissionRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionTypeRegister::class);
     }
 
