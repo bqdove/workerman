@@ -4,3 +4,5 @@
 # Notadd Workerman
 
 Notadd Framework 的 Socket 通信模块。
+
+注： 该拓展无法在win上正常运行
