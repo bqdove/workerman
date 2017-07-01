@@ -40,16 +40,6 @@ class ModuleServiceProvider extends Module
     }
 
     /**
-     * Description of module
-     *
-     * @return string
-     */
-    public static function description()
-    {
-        return '';
-    }
-
-    /**
      * Install for module.
      *
      * @return string
@@ -60,16 +50,6 @@ class ModuleServiceProvider extends Module
     }
 
     /**
-     * Name of module.
-     *
-     * @return string
-     */
-    public static function name()
-    {
-        return 'Workerman';
-    }
-
-    /**
      * Uninstall for module.
      *
      * @return string
@@ -77,15 +57,5 @@ class ModuleServiceProvider extends Module
     public static function uninstall()
     {
         return Uninstaller::class;
-    }
-
-    /**
-     * Version of module.
-     *
-     * @return string
-     */
-    public static function version()
-    {
-        return '1.0.0';
     }
 }
