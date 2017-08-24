@@ -1,0 +1,10 @@
+name: Workerman
+identification: notadd/workerman
+description: 'Workerman'
+author:
+    - twilroad
+    - 269044570@qq.com
+version: 0.1.0
+events:
+    subscribes:
+        - Notadd\Workerman\Listeners\RouteRegister

@@ -30,32 +30,6 @@ class ModuleServiceProvider extends Module
      */
     public function boot()
     {
-        $this->app->make(Dispatcher::class)->subscribe(CsrfTokenRegister::class);
-        $this->app->make(Dispatcher::class)->subscribe(FlowRegister::class);
-        $this->app->make(Dispatcher::class)->subscribe(PermissionGroupRegister::class);
-        $this->app->make(Dispatcher::class)->subscribe(PermissionModuleRegister::class);
-        $this->app->make(Dispatcher::class)->subscribe(PermissionRegister::class);
-        $this->app->make(Dispatcher::class)->subscribe(PermissionTypeRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(RouteRegister::class);
-    }
-
-    /**
-     * Install for module.
-     *
-     * @return string
-     */
-    public static function install()
-    {
-        return Installer::class;
-    }
-
-    /**
-     * Uninstall for module.
-     *
-     * @return string
-     */
-    public static function uninstall()
-    {
-        return Uninstaller::class;
     }
 }
